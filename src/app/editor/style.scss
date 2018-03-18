@@ -1,5 +1,41 @@
-div {
-    background-color:red;
-    width: 100px;
-    height: 100px;
+@import '../../styles/styles.scss';
+.editor {
+    background-color: $color-secondary-1-0;
+    border: 1px solid darken($color-secondary-1-0, 5);
+    border-radius: $custom-border-radius;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    &__table {
+        border-collapse: collapse;
+        td {
+            border: 1px solid $color-secondary-1-2;
+        }
+    }
+    .size {
+        .label {
+            margin: 10px;
+        }
+        .input {
+            width: 50px;
+        }
+    }
+    .viewport {
+        margin-top: 15px;
+        background-color: $color-secondary-1-2;
+        flex-grow: 1;
+        border-radius: $custom-border-radius;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        table {
+            border-collapse: collapse;
+            tr td {
+                width: 12px;
+                height: 12px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
 }

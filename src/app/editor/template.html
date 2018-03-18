@@ -1,3 +1,22 @@
-<div>
-    Editor {{ title }}
+<div class="editor">
+    <div class="size">
+        <label class="label">Width:
+            <input class="input" type='number' 
+                   max="64" min="1" [(ngModel)]="inWidth" />
+        </label>
+        <label class="label">Height:
+            <input class="input" name="height" type='number' 
+                   max="64" min="1" [(ngModel)]="inHeight" />
+        </label>
+        <button (click)="setEditspace()" class="button" type="button">Set</button>
+    </div>
+    <div class="viewport">
+        <table>
+            <tr *ngFor="let row of colorTable">
+                <td *ngFor="let col of row"></td>
+            </tr>
+        </table>
+    </div>
+
+
 </div>
